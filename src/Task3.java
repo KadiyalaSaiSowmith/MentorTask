@@ -4,12 +4,13 @@ Print the test result.*/
 
 import java.util.*;
 public class Task3 {
-    public static void main(String args[])
+
+    public void primeNumbers(int start_int,int end_int)
     {
         int count=0;
         ArrayList<Integer> primeNo = new ArrayList<Integer>();
-        int starting_number = 2;
-        int ending_number = 100;
+        int starting_number = start_int;
+        int ending_number = end_int;
         for(int i=2;i<=100;i++)
         {
             for(int j=1;j<=i;j++)

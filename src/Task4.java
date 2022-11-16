@@ -9,39 +9,35 @@
 import java.util.*;
 
 public class Task4 {
-    public static void main(String args[])
-    {  int remove;
-        int sub=0;
-        int k=0;
+    public static void removalOfTheNumber(int removeInt,int[] arr1)
+    {
+        int removeInteger=removeInt;
+        int[] array1 = new int[arr1.length];
+        array1 = arr1;
+        int UnwantedIntegerCount=0;
+        int ResultArrayIndex=0;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter 10 integer elements in an array");
-        int[] arr = new int[10];
-        for(int i=0;i<arr.length;i++)
+
+        for(int i=0;i<array1.length;i++)
         {
-            arr[i]=sc.nextInt();
-        }
-        System.out.println("Enter the element to be removed from the array");
-        remove=sc.nextInt();
-        for(int i=0;i<arr.length;i++)
-        {
-            if(arr[i]==remove)
+            if(array1[i]==removeInteger)
             {
-                sub++;
+                UnwantedIntegerCount++;
             }
         }
-        int [] resultArr = new int[arr.length-sub];
-        for(int i=0;i<arr.length;i++)
+        int [] resultArr = new int[array1.length-UnwantedIntegerCount];
+        for(int i=0;i<array1.length;i++)
         {
-            if(arr[i]==remove)
+            if(array1[i]==removeInteger)
             {
 
             }
             else {
-                resultArr[k]=arr[i];
-                k++;
+                resultArr[ResultArrayIndex]=array1[i];
+                ResultArrayIndex++;
             }
         }
-        System.out.println("Original input Array: " + Arrays.toString(arr));
+        System.out.println("Original input Array: " + Arrays.toString(array1));
         System.out.println("Modified Output Array: " + Arrays.toString(resultArr));
 
 

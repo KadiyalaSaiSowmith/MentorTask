@@ -8,26 +8,24 @@
 */
 import java.util.*;
 public class Task5 {
-    public static void main(String args[])
+    public static void countLetters(String str)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the String ");
-        String str = sc.nextLine();
+        String string = str;
         // if u don't want spaces user str.replace keyword to remove the spaces
-        HashMap<Character,Integer> hashy = new HashMap<Character, Integer>();
-        char ch[] = str.toCharArray();
-        for(int i=0;i<ch.length;i++)
+        HashMap<Character,Integer> hashMap = new HashMap<Character, Integer>();
+        char charArr[] = string.toCharArray();
+        for(int i=0;i<charArr.length;i++)
         {
-            if(hashy.containsKey(ch[i]))
+            if(hashMap.containsKey(charArr[i]))
             {
-                hashy.put(ch[i], hashy.get(ch[i]) + 1);
+                hashMap.put(charArr[i], hashMap.get(charArr[i]) + 1);
             }
             else
             {
-                hashy.put(ch[i],1);
+                hashMap.put(charArr[i],1);
             }
 
         }
-        System.out.println(hashy);
+        System.out.println(hashMap);
     }
 }
